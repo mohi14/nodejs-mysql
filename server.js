@@ -19,7 +19,10 @@ app.use(express.urlencoded({ extended: true }));
 // routers
 
 const productRoutes = require("./Routes/productRoutes");
+const reviewRoutes = require("./Routes/productRoutes");
+
 app.use("/api/products/", productRoutes);
+app.use("api/reviews/", reviewRoutes);
 
 //  testing api
 app.get("/", (req, res) => {
